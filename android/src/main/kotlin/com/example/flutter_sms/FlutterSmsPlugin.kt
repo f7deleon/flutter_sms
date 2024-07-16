@@ -148,7 +148,7 @@ class FlutterSmsPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
           )
         }
       }
-    }, IntentFilter(SENT_INTENT_ACTION))
+    }, IntentFilter(SENT_INTENT_ACTION, ContextCompat.RECEIVER_NOT_EXPORTED))
 
     val mSmsManager = SmsManager.getDefault()
     val numbers = phones.split(";")
